@@ -1,6 +1,4 @@
 [
-
-
     {
         "title": "Programa GDG",
         "logos": [{
@@ -9,7 +7,6 @@
             "logoUrl": "../images/partners/googledev_v.svg"
         }]
     },
-
     {
         "title": "Patrocinadores",
         "logos": [
@@ -30,7 +27,6 @@
           }
       ]
     },
-
     {
         "title": "Apoiadores",
         "logos": [
@@ -70,7 +66,6 @@
           }
         ]
       },
-
       {
           "title": "",
           "logos": [
@@ -106,7 +101,6 @@
           }
         ]
       },
-
       {
           "title": "",
           "logos": [

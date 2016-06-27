@@ -1,4 +1,3 @@
-<link rel="import" href="../photo-gallery/photo-gallery.html">
 <dom-module id="photo-block">
     <style>
     :host {
@@ -49,34 +48,35 @@
         <div class="photo-wrapper layout horizontal">
             <div class="flex relative big">
                 <iron-image src="{{photos.big}}" class="placeholder-color fit" sizing="cover" preload fade></iron-image>
-                <div class="open-photos layout vertical center-center fit pointer" on-tap="openGallery">
-                    <span>Clique para ver mais fotos</span>
+                <div class="open-photos layout vertical center-center fit pointer">
+                     <a href="https://plus.google.com/events/gallery/ctc1n6o9dhnr4jj186svg90v5dg" target="_blank">
+                        Clique para ver mais fotos
+                    </a>
                 </div>
             </div>
             <div class="flex layout vertical">
                 <div class="flex relative">
                     <iron-image src="{{photos.small.0}}" class="placeholder-color fit" sizing="cover" preload fade></iron-image>
-                    <div class="open-photos layout vertical center-center fit pointer" on-tap="openGallery">
-                        <span>Clique para ver mais fotos</span>
+                    <div class="open-photos layout vertical center-center fit pointer">
+                       <span>
+                            <a href="https://plus.google.com/events/gallery/ctc1n6o9dhnr4jj186svg90v5dg" target="_blank">
+                                Clique para ver mais fotos
+                            </a>
+                        </span>
                     </div>
                 </div>
                 <div class="flex relative hidden-xs">
                     <iron-image src="{{photos.small.1}}" class="placeholder-color fit" sizing="cover" preload fade></iron-image>
-                    <div class="open-photos layout vertical center-center fit pointer" on-tap="openGallery">
-                        <span>Clique para ver mais fotos</span>
+                    <div class="open-photos layout vertical center-center fit pointer">
+                        <span>
+                            <a href="https://plus.google.com/events/gallery/ctc1n6o9dhnr4jj186svg90v5dg" target="_blank">
+                                Clique para ver mais fotos
+                            </a>
+                        </span>
                     </div>
                 </div>
             </div>
         </div>
-        <paper-dialog id="photosDialog" class="gallery-dialog fit" entry-animation="scale-up-animation" exit-animation="fade-out-animation">
-            <paper-toolbar class="navbar-overlay fit">
-                <paper-icon-button icon="icons:arrow-back" on-tap="closeGallery"></paper-icon-button>
-                <div class="title text-left">GDG DevFest SP 2014 - Fotos</div>
-            </paper-toolbar>
-            <div class="gallery-container fit">
-                <photo-gallery user-id="114285779399410164736" album-id="6087858584285012177"></photo-gallery>
-            </div>
-        </paper-dialog>
     </template>
 </dom-module>
 <script>
@@ -87,15 +87,9 @@ Polymer({
     },
     attached: function() {
         this.photos = {
-            big: '../images/backgrounds/2014_1.jpg',
-            small: ['../images/backgrounds/2014_2.jpg', '../images/backgrounds/2014_3.jpg']
+            big: '../images/backgrounds/devfestgoias2015-1.jpg',
+            small: ['../images/backgrounds/devfestgoias2015-2.jpg', '../images/backgrounds/devfestgoias2015-3.jpg']
         };
-    },
-    openGallery: function() {
-        this.$.photosDialog.open();
-    },
-    closeGallery: function() {
-        this.$.photosDialog.close();
     }
 });
 </script>
