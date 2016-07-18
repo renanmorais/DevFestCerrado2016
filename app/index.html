@@ -10,9 +10,9 @@
   <meta name="keywords"
         content="event, gdg, gde, devfest,
                 google, programming, android,
-                gdg-goiania, gdg-brasilia,
+                gdg-goiania, gdg-brasilia, gdg-senadorcanedo
                 gdg-jatai, gdg-rioverde, gdg-itumbiara,
-                gdg-uberlandia, gdg uberaba">
+                gdg-uberlandia, gdg-uberaba">
   <link rel="canonical" href="http://devfestcerrado.com.br">
   <title>GDG DevFest Cerrado 2016 &bull; 15 de outubro de 2016</title> <!-- TODO: Edit -->
 
@@ -75,21 +75,22 @@
                   <div class="bottom">
                       <span class="typo-white">
                       <!-- TODO: Edit -->
-                          31 de Agosto de 2016
+                          15 de Outubro de 2016
                       </span>
                       <span class="block typo-white">
                       <!-- TODO: Edit -->
-                          Centro Cultural Oscar Niemeyer
+                          Espaço Equatore
                       </span>
                   </div>
                 </paper-toolbar>
+                <!--
                 <paper-menu class="list" attr-for-selected="data-route" selected="{{route}}" on-iron-select="onMenuSelect">
                   <a data-route="#!/home" href="/">Home</a>
                   <a data-route="#!/blog" href="/blog">Novidades</a>
                   <a data-route="#!/schedule" href="/schedule">Programação</a>
                   <a data-route="#!/speakers" href="/speakers">Palestrantes</a>
-                    <!-- <a data-route="contact" href="/contact">Contact</a> -->
-                </paper-menu>
+                     <a data-route="contact" href="/contact">Contact</a>
+                </paper-menu>-->
             </paper-header-panel>
             <div class="scroll" main>
                 <!-- Main Content -->
@@ -105,12 +106,16 @@
                                           <p class="description">Vem aí a maior conferência sobre tecnologias Google do Cerrado Brasileiro, organizada especialmente pela comunidade GDG!</p>
                                           <p class="slogan">Aprender, inspirar e conectar!</p>
                                           <div class="links layout horizontal align-pb-block hero-home">
+                                             <!--
+                                             Comentado até possuir form para palestrantes
+
                                               <a href="#" target="_blank">
                                                   <paper-button class="colorful" raised>
                                                       Submeta uma palestra
                                                   </paper-button>
                                               </a>
-                                              <a href="#pricetable">
+                                              -->
+                                              <a href="https://credencial.imasters.com.br/devfest-cerrado">
                                                   <paper-button class="colorful" raised>
                                                       Inscreva-se
                                                   </paper-button>
@@ -132,13 +137,16 @@
                             </hero-block>
                             <statistics-block></statistics-block>
                             <featured-people source="../../data/featured-speakers.json">
-                                <h4 class="heading">Principais Palestrantes</h4>
+                                <h4 class="heading">Palestrantes em Breve, Aguarde...</h4>
                             </featured-people>
                             <map-block></map-block>
 <!--
                             <tickets-block></tickets-block>
 -->
+                            <!--
+                            comentado pois não temos app para consumir twiter
                             <social-feed source="http://devfestsp15-twitter.herokuapp.com/tweetledee/favoritesjson.php?c=10&cache_interval=7200"></social-feed>
+                            -->
                             <logos-block source="../../data/partners.json">
                                 <h4 class="heading">Parceiros</h4>
                             </logos-block>
@@ -213,3 +221,4 @@
     <!-- endbuild-->
 </body>
 </html>
+

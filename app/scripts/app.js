@@ -76,6 +76,17 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
             return; // already at top of element.
         }
 
+        function smoothStep(start, end, point) {
+            if (point <= start) {
+                return 0;
+            }
+            if (point >= end) {
+                return 1;
+            }
+            var x = (point - start) / (end - start);
+            return x * x * (3 - 2 * x);
+        }
+
         var callback = function(timestamp) {
             if (timestamp < endTime) {
                 requestAnimationFrame(callback);
@@ -92,16 +103,5 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         };
         callback(startTime);
     };
-
-    function smoothStep(start, end, point) {
-        if (point <= start) {
-            return 0;
-        }
-        if (point >= end) {
-            return 1;
-        }
-        var x = (point - start) / (end - start);
-        return x * x * (3 - 2 * x);
-    }
 
 })(document);
