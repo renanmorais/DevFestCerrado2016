@@ -3,109 +3,115 @@
         <style>
             :host {
                 display: block;
-                background: #fff;
-                color: var(--default-color);
+                background: #7d7d7d;
+                color:  #fff;
             }
-
             .container {
                 padding-bottom: 35px;
             }
-
             .price-block-wrapper {
                 margin-top: 20px;
             }
-
             .ticket-name {
                 margin-bottom: -5px;
                 font-size: 30px;
+                font-weight: 200;
             }
-
             .price-block {
                 margin-bottom: 15px;
             }
-
+            .sold-out > *:not(.sold-out-text) {
+                opacity: .3;
+            }
+            .sold-out-text {
+                font-size: 28px;
+                text-transform: uppercase;
+            }
             .currency {
                 margin-top: 21px;
                 display: inline-block;
                 vertical-align: top;
             }
-
             .price {
                 font-size: 70px;
+                font-weight: 200;
             }
-
             .details {
                 margin-top: 10px;
-                margin-bottom: 30px;
                 font-size: 14px;
-
             }
-
-            .details a {
-                color: inherit;
-            }
-
             .additional-info {
                 margin-top: -5px;
                 font-size: 13px;
             }
-
             .open-dialog-button {
                 margin-top: 30px;
             }
-
             paper-dialog {
                 background: #fff;
             }
-
             @media (min-height: 400px) {
                 paper-dialog {
                     min-height: 380px;
                 }
             }
-
             paper-dialog .buttons {
                 color: initial;
             }
         </style>
         <div id="pricetable" class="container wrap relative layout vertical text-center">
-            <h4 class="heading">Faça parte do evento!</h4>
+            <h4 class="heading">Inscrições</h4>
             <div class="price-block-wrapper flex layout vertical-horizontal">
                 <div class="price-block flex text-center">
-                    <span class="ticket-name block">Don't PANIC</span>
+                    <span class="ticket-name block">1º Lote - Onça</span>
                     <span class="currency">R$</span>
-                    <span class="price">240</span>
-                    <span class="additional-info block">*Até de 10 de outubro ou 450 ingressos.<br/>Garante acesso a festa de confraternização.</span>
+                    <span class="price">55,00</span>
+                    <span class="additional-info block">*Até de 30 de junho ou 200 ingressos.
+                </div>
+                <!--   <div class="price-block flex text-center relative sold-out">-->
+                <div class="price-block flex text-center relative">
+                    <span class="ticket-name block">2º Lote - Lobo-Guará</span>
+                    <span class="currency">R$</span>
+                    <span class="price">65,00</span>
+                    <span class="additional-info block">*Até de 30 de agosto ou 400 ingressos.</span>
+                   <!-- <div class="fit layout vertical center-center sold-out-text"><span>Sold Out</span></div> -->
                 </div>
                 <div class="price-block flex text-center">
-                    <span class="ticket-name block">Traga sua toalha</span>
+                    <span class="ticket-name block">3º Lote - Ema</span>
                     <span class="currency">R$</span>
-                    <span class="price">340</span>
-                    <span class="additional-info block">*<strong>Até 15 de novembro!</strong></span>
-                </div>
-                <div class="price-block flex text-center">
-                    <span class="ticket-name block">Não seja um Vógon</span>
-                    <span class="currency">R$</span>
-                    <span class="price">440</span>
-                    <span class="additional-info block">*Após 15 de novembro</span>
+                    <span class="price">75,00</span>
+                    <span class="additional-info block">*Após 01 de setembro</span>
                 </div>
             </div>
-            <span class="details">O ingresso garante o acesso a todas as áreas do evento incluindo experimentos e alimentação (welcome coffee e break da tarde).<br/>
-              Os primeiros 450 inscritos tem garantido acesso a confraternização realizada em conjunto com o FrontinSampa, no <a href="http://www.infernoclub.com.br/" target="_blank">Inferno Club</a>!<br/>
-              Hospedagem e almoço NÃO estão inclusos no valor da inscrição.<br/>&nbsp;<br/>Desconto especial para mulheres através do cupom "<a href="http://even.tc/devfest-sao-paulo-2015/?code=WTM" target="_blank">WTM</a>".</span>
+            <span class="details">O ingresso garante o acesso a todas as áreas do evento incluindo experimentos e alimentação (welcome coffee e break da tarde).</span>
             <div class="flex">
-              <a href="http://even.tc/devfest-sao-paulo-2015" target="_blank">
-                <paper-button class="colorful" raised on-tap="openTicketsDialog">Compre seu ingresso pelo Eventick</paper-button>
-              </a>
+                <a href="https://credencial.imasters.com.br/devfest-cerrado" target="_blank">
+                    <paper-button class="white border-button open-dialog-button">Compre seu ingresso</paper-button>
+                </a>
             </div>
         </div>
     </template>
 </dom-module>
 <script>
+    /* jshint ignore:start */
+    var widgetOptions = {
+        bg_color: 'ffffff',
+        id: 312113,
+        lang: 'en'
+    };
+    /* jshint ignore:end */
+    setTimeout(function() {
+        var script = document.createElement('script');
+        script.type = 'text/javascript';
+        script.async = true;
+        script.src = 'https://2event.com/js/widget-tickets.js';
+        document.getElementsByTagName('head')[0].appendChild(script);
+    },2000);
     Polymer({
         is: 'tickets-block',
         openTicketsDialog: function() {
             ga('send', 'buy-a-ticket', 'button', 'click'); // jshint ignore:line
+            this.$.ticketsDialog.open();
         }
     });
 </script>
