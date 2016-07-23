@@ -97,13 +97,14 @@
                 <div class="content">
                     <iron-pages attr-for-selected="data-route" selected="{{route}}">
                         <section data-route="home">
-                            <hero-block class="section-shadow" hide-logo route="{{route}}">
+                            <hero-block class="section-shadow" hide-logo route="{{route}}" style="color: #fff;">
                                 <div class="top-section hero">
                                   <div class="layout vertical-horizontal">
                                       <div class="flex center-content-xs">
-                                          <img class="logo" src="images/logo.svg" alt="GDG DevFest Cerrado 2016">
+                                          <img class="logo" style="height: 180px;" src="images/logo_arvore.svg" alt="GDG DevFest Cerrado 2016">
                                           <p class="dates bold">15 de outubro de 2016</p>
                                           <p class="description">Vem aí a maior conferência sobre tecnologias Google do Cerrado Brasileiro, organizada especialmente pela comunidade GDG!</p>
+
                                           <p class="slogan">Aprender, inspirar e conectar!</p>
                                           <div class="links layout horizontal align-pb-block hero-home">
                                              <!--
@@ -140,11 +141,9 @@
                                 <h4 class="heading">Palestrantes em Breve, Aguarde...</h4>
                             </featured-people>
 
+                            <map-block></map-block
+
                             <tickets-block></tickets-block>
-                            <map-block></map-block>
-<!--
-                            <tickets-block></tickets-block>
--->
                             <!--
                             comentado pois não temos app para consumir twiter
                             <social-feed source="http://devfestsp15-twitter.herokuapp.com/tweetledee/favoritesjson.php?c=10&cache_interval=7200"></social-feed>

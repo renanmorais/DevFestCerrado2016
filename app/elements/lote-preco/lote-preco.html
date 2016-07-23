@@ -1,4 +1,4 @@
-<dom-module id="statistics-block">
+<dom-module id="lote-preco">
     <template>
         <style>
             :host {
@@ -25,10 +25,9 @@
         </style>
         <div class="container flex wrap relative layout horizontal">
             <template is="dom-repeat" items="{{statistics}}">
-                <div class="statistics-element two-column-xs layout vertical text-center">
-                    <span class="counter">{{item.counter}}</span>
-                    <span class="caption">{{item.caption}}</span>
-                </div>
+                <paper-card heading="Card Title" image="/path/to/image.png">
+                    ...
+                </paper-card>
             </template>
         </div>
     </template>
@@ -36,7 +35,7 @@
 
 <script>
     Polymer({
-        is: 'statistics-block',
+        is: 'lote-preco',
         properties: {
             statistics: {
                 type: Array
@@ -44,13 +43,13 @@
         },
         attached: function() {
             this.statistics = [{
-                counter: '+600',
+                counter: '2222222222',
                 caption: 'Participantes'
               }, {
-                  counter: '4',
+                  counter: '3222222',
                   caption: 'Áreas simultâneas'
               }, {
-                counter: '+15',
+                counter: '+2222222',
                 caption: 'Palestras'
               }
             ];
